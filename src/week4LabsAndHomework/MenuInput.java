@@ -138,6 +138,7 @@ finished = true;
 System.out.println("Goodbye -- End of Order!");
 } // end of main
 
+
 public static void printCupOrConeOptions() {
 System.out.println("Choose either a CUP or a CONE for your order: ");
 System.out.println("---------------------------------------------");
@@ -195,4 +196,4 @@ System.out.println("\t3) LARGE -- 3 scoops");
 System.out.print("Enter your selection: ");
 }
 
-}﻿ // End of MenuInput 
+﻿} // End of MenuInput 
