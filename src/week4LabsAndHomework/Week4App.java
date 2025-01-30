@@ -136,26 +136,177 @@ public class Week4App {
 //				sumList(num1, num2, num3, num4);
 		
 	
-	static void beginEnd(int endNum) {
-	    // WRITE YOUR CODE HERE
-		List<Integer> newList = new ArrayList<Integer>();
-		if (endNum > 0) {
-			for (int i = 1; i <= endNum; i++) {
-				newList.add(i);
-			} //for
-			System.out.println("The first number in the List is " + newList.get(0));
-			System.out.println("The last number in the List is " + (newList.get(endNum-1)));
-		} else {
-			System.out.println("Your List cannot be created with a number less than one.");
-		}
-
-
-	/***** DO NOT CHANGE THE CODE BELOW THIS LINE *****/ 
-	}
-	public static void main(String[] args) {
-		//Scanner in = new Scanner(System.in);
-		int endNum = 0;
-		beginEnd(endNum);
+//	static void beginEnd(int endNum) {
+//	    // WRITE YOUR CODE HERE
+//		List<Integer> newList = new ArrayList<Integer>();
+//		if (endNum > 0) {
+//			for (int i = 1; i <= endNum; i++) {
+//				newList.add(i);
+//			} //for
+//			System.out.println("The first number in the List is " + newList.get(0));
+//			System.out.println("The last number in the List is " + (newList.get(endNum-1)));
+//		} else {
+//			System.out.println("Your List cannot be created with a number less than one.");
+//		}
+//
+//
+//	/***** DO NOT CHANGE THE CODE BELOW THIS LINE *****/ 
+//	}
+//	public static void main(String[] args) {
+//		//Scanner in = new Scanner(System.in);
+//		int endNum = 0;
+//		beginEnd(endNum);
 		
+	
+//	static void halfList(List<String> words) {
+//		  // WRITE YOUR CODE HERE
+//			List<String> newList = new ArrayList<String>();
+//			for (int i = 0; i <= words.size(); i += 2) {
+//				newList.add(words.get(i));
+//			}
+//
+//		/***** DO NOT CHANGE THE CODE BELOW THIS LINE *****/
+//			System.out.println("The old List is: " + words);
+//			System.out.println("The new List is: " + newList);
+//		}
+//		public static void main(String[] args) {
+//			//Scanner in = new Scanner(System.in);
+//			String word1, word2, word3, word4, word5;
+//			word1 = "Jeff";
+//			word2 = "Karen";
+//			word3 = "Donald";
+//			word4 = "Duck";
+//			word5 = "Mistletoe";
+//			List<String> words = new ArrayList<>();
+//			words.add(word1);
+//			words.add(word2);
+//			words.add(word3);
+//			words.add(word4);
+//			words.add(word5);
+//			
+//			halfList(words);
+
+//		List<Integer> newInts = new ArrayList<>();
+//		newInts.add(894);
+//		newInts.add(-1);
+//		newInts.add(1077);
+//		newInts.add(43);
+//		newInts.add(54329);
+//
+//		Collections.sort(newInts);
+//		System.out.println(newInts);
+	
+	
+//	static List squaredList(int num1, int num2, int num3, int num4, int num5) {
+	    // WRITE YOUR CODE HERE
+//		List<Integer> squaredNums = new ArrayList<>();
+//		squaredNums.add(num1 * num1);
+//		squaredNums.add(num2 * num2);
+//		squaredNums.add(num3 * num3);
+//		squaredNums.add(num4 * num4);
+//		squaredNums.add(num5 * num5);
+//		
+//		return squaredNums;
+//		
+//	/***** DO NOT CHANGE THE CODE BELOW THIS LINE *****/		
+//	}
+//	public static void main(String[] args) {
+//		//Scanner in = new Scanner(System.in);
+//		int num1 = 1;
+//		int num2 = 2;
+//		int num3 = 3;
+//		int num4 = 4;
+//		int num5 = 5;
+//		System.out.println(squaredList(num1,num2,num3,num4,num5));
+		
+
+//	static void findLetter(List<Character> alphabet, char userLetter) {
+//	    // WRITE YOUR CODE HERE
+//		char test;
+//		for (int i=0; i < alphabet.size(); i++) { // This can also use:  int valueIndex = alphabet.indexOf(userLetter);
+//			test = alphabet.get(i);
+//			if (test == userLetter) {
+//				System.out.println(i);
+//			}
+//		
+//		}
+//	
+//	/***** DO NOT CHANGE THE CODE BELOW THIS LINE *****/
+//	}
+//	public static void main(String[] args) {
+//		//Scanner in = new Scanner(System.in);
+//		char userLetter = 'n';  //in.next().charAt(0);
+//		
+//		List<Character> alphabet = new ArrayList<>();
+//		for (int i = 97; i < (97+26); i++) { // This uses the ASCII codes to generate the lower cases of the alphabet.
+//		    alphabet.add((char) i);
+//		}
+//		findLetter(alphabet, userLetter);
+	
+
+//	static void factors(int userNumber) {
+//	    // WRITE YOUR CODE HERE
+//		List<Integer> factorNum = new ArrayList<>(); // This code provides all the factors of a given number!
+//		for (int i = 1; i <= userNumber; i++) {
+//			if (userNumber % i == 0) {
+//				factorNum.add(i);
+//			}
+//		}
+//		System.out.println(factorNum);
+//		
+//	/***** DO NOT CHANGE THE CODE BELOW THIS LINE *****/
+//	}
+//	public static void main(String[] args) {
+//		//Scanner in = new Scanner(System.in);
+//		int userNumber = 12; //in.nextInt();
+//		factors(userNumber);
+
+	
+//    public static void main(String[] args) { // This is an example of a LinkedList.
+//        // Create a new LinkedList to store our shopping list
+//        LinkedList<String> shoppingList = new LinkedList<>();
+//
+//        // Add some items to the list
+//        shoppingList.add("Apples");
+//        shoppingList.add("Bread");
+//        shoppingList.add("Bananas");
+//        shoppingList.add("Milk");
+//        shoppingList.add("Cheese");
+//        shoppingList.add("Eggs");
+//        shoppingList.add("Ham");
+//
+//        //shoppingList.remove(2);
+//
+//        // Print out the entire shopping list using an enhanced for loop
+//        System.out.println("Shopping List:");
+//
+//        for (String item : shoppingList) {
+//            System.out.println(item);
+//        }
+//        
+	
+	public static void main(String[] args) {
+	      
+        LinkedList<String> line = new LinkedList<String>();
+        line.add("Amanda");
+        line.add("Brad");
+        line.add("Cori");
+      
+        System.out.println("People in line: " + line);
+        System.out.println("First person in line was: " + line.get(0));
+        System.out.println("The last person in line was: " + line.get(2));
+    /***** DO NOT CHANGE THE CODE ABOVE THIS LINE *****/
+        // WRITE YOUR CODE HERE
+        line.remove(0);
+        line.add("Danny");
+        
+    
+    /***** DO NOT CHANGE THE CODE BELOW THIS LINE *****/
+        System.out.println("People in line now: " + line);
+        System.out.println("Now the first person in line is: " + line.get(0));
+        System.out.println("The last person in line is: " + line.get(2));
+    
+
+	
 	}
 }
