@@ -287,26 +287,61 @@ public class Week4App {
 	
 	public static void main(String[] args) {
 	      
-        LinkedList<String> line = new LinkedList<String>();
-        line.add("Amanda");
-        line.add("Brad");
-        line.add("Cori");
-      
-        System.out.println("People in line: " + line);
-        System.out.println("First person in line was: " + line.get(0));
-        System.out.println("The last person in line was: " + line.get(2));
-    /***** DO NOT CHANGE THE CODE ABOVE THIS LINE *****/
-        // WRITE YOUR CODE HERE
-        line.remove(0);
-        line.add("Danny");
-        
-    
-    /***** DO NOT CHANGE THE CODE BELOW THIS LINE *****/
-        System.out.println("People in line now: " + line);
-        System.out.println("Now the first person in line is: " + line.get(0));
-        System.out.println("The last person in line is: " + line.get(2));
-    
+//        LinkedList<String> line = new LinkedList<String>();
+//        line.add("Amanda");
+//        line.add("Brad");
+//        line.add("Cori");
+//      
+//        System.out.println("People in line: " + line);
+//        System.out.println("First person in line was: " + line.get(0));
+//        System.out.println("The last person in line was: " + line.get(2));
+//    /***** DO NOT CHANGE THE CODE ABOVE THIS LINE *****/
+//        // WRITE YOUR CODE HERE
+//        line.remove(0);
+//        line.add("Danny");
+//        
+//    
+//    /***** DO NOT CHANGE THE CODE BELOW THIS LINE *****/
+//        System.out.println("People in line now: " + line);
+//        System.out.println("Now the first person in line is: " + line.get(0));
+//        System.out.println("The last person in line is: " + line.get(2));
+//    
 
-	
+//	
+//		Scanner kb = new Scanner(System.in);
+//		ArrayList<String> names =  new ArrayList<>();
+//		System.out.println("Please enter a name: Press 0 to exit");
+//		
+//		while(true) {
+//			String name = kb.nextLine();
+//			if(name.equals("0"))
+//				break;
+//			else {
+//				names.add(name);
+//				System.out.println("Please add another name or press 0.");
+//			}
+//		}
+//		
+//	System.out.println(names);
+//		System.out.println("Type the phrase you want to encrypt here:  "); //This should take a phrase to encrypt, plus a number that becomes the hash.
+//		Scanner kb = new Scanner(System.in);								//It then will determine the ASCII code for each letter, add the hash to it, and return the ASCII code of the new letter,
+//		String inputPhrase = kb.nextLine();									//which it will put into a new HashMap.  The new HashMap is then printed out as the encoded phrase.
+//																			//A second script will reverse that process and return the decrypted reply.
+//		//String phrase = "The man with tHe Plan. The happy pu@#ppy doeth the time.";
+//		HashMap<Character,Integer> charMap = new HashMap<>();		char [] letters = inputPhrase.toCharArray();
+//		HashMap<Character>
+//		for(char c : letters) {
+//			
+//		}
+////			if (charMap.containsKey(c)) {
+////				//charMap.put(c, charMap.get(c) + 1);
+////			}
+////			else {
+////				charMap.put(c, 1);
+//			
+//			
+//		System.out.println(inputPhrase);
+//		System.out.println(letters);		
+		
 	}
 }
