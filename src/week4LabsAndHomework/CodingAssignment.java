@@ -75,8 +75,61 @@ public class CodingAssignment {
 		System.out.println("Section 4");
 		System.out.println("You access the first element of any array with array[0].");
 		
+		System.out.println();
+		System.out.println("Sections 5 and 6");
+		int[] nameLengths = new int[names.length]; // This defines the nameLengths array for Section 5.
+		totalLetters = 0; // This resets totalLetters, from Section 2.a.
+		for (int mm = 0; mm < names.length; mm++) {
+			nameLengths[mm] = names[mm].length(); // This populates the nameLengths array with the lengths of the elements of the names array.
+			totalLetters = totalLetters + nameLengths[mm]; // Collecting the sum of the length of each element in the names array, for Section 6, which I already did, in Section 2.a.
+		}
+		System.out.println("The sum of the elements of the names array is " + totalLetters);
+
+		System.out.println();
+		System.out.println("Section 7");
+		System.out.println(section7("Hello", 5)); // This calls the section7 method.
+		
+		System.out.println();
+		System.out.println("Section 8");
+		System.out.println(section8("Randy", "Pettit")); // This calls the section8 method.
+		
+		System.out.println();
+		System.out.println("Section 9");
+		int[] section9InputArray = {25,30,40,50}; // This provides input for the section9 method.
+		System.out.println(section9(section9InputArray)); // This calls the section9 method.
+		if (section9(section9InputArray)) {										// This provides clarification of the answer for Section 9.
+			System.out.println("The Section 9 numbers are more than 100.");
+		} else {
+			System.out.println("The Section 9 numbers are less than or equal to 100.");
+		}
 		
 		
 	} //main
+	
+	public static String section7(String word, int n) {  // Defines the method for Section 7.
+		String returnString = "";
+		for (int nn = 0; nn < n; nn++) {
+			returnString = returnString + word; // This performs the concatenation.
+		} // for
+		return returnString;
+	} // section7 method
+	
+	public static String section8(String firstName, String lastName) { // Defines the method for Section 8.
+		String fullName = "";
+		fullName = firstName + " " + lastName; // This performs the concatenation to create the fullName.
+		return fullName;
+	} // section8 method
+	
+	public static boolean section9(int[] section9Array) { // Defines the method for Section 9.
+		int section9sum = 0;
+		boolean section9Answer = false;
+		for (int oo = 0; oo < section9Array.length; oo++) { // This populates the section9Array.
+			section9sum += section9Array[oo];  // This adds the elements of the array.
+		} // for
+		if (section9sum > 100) { // This tests whether the sum of the elements of section9Array > 100.
+			section9Answer = true; // This sets section9Answer to true.
+		} // if.
+		return section9Answer;  
+	} // section 9 method
 
 } //Class
