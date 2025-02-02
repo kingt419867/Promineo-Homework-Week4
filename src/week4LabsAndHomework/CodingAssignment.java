@@ -1,4 +1,6 @@
 package week4LabsAndHomework;
+import java.util.*;
+import java.io.*;
 
 public class CodingAssignment {
 
@@ -50,13 +52,13 @@ public class CodingAssignment {
 		System.out.println();
 		System.out.println("Section 2.a");
 		String[] names = {"Sam","Tommy","Tim","Sally","Buck","Bob"}; // Creating and initializing the array.
-		int totalLetters = 0;
+		double totalLetters = 0;
 		for (String name : names) {
 			totalLetters = totalLetters + name.length(); // Collecting the sum of the length of each element in the names array.
 		}
 		System.out.println("The total number of letters is " + totalLetters);
-		double avgLength = Math.round(totalLetters / names.length);  // Calculating the average name length by dividing the sum of the lengths by the length of the array (in elements).
-		System.out.println("The average length of each word in the names array is " + avgLength); // Printing out the average length. ** Not sure why it's not finding the real average, 3.8333.
+		double avgLength = (totalLetters / names.length);  // Calculating the average name length by dividing the sum of the lengths by the length of the array (in elements).
+		System.out.println("The average length of each word in the names array is " + avgLength); // Printing out the average length. 
 		
 		System.out.println();
 		// Section 2.b Concatenating the names
@@ -96,13 +98,69 @@ public class CodingAssignment {
 		System.out.println();
 		System.out.println("Section 9");
 		int[] section9InputArray = {25,30,40,50}; // This provides input for the section9 method.
+		System.out.println("The input numbers are:  "); 
+		for (int op = 0; op < section9InputArray.length; op++) {  // This displays the input numbers.
+			System.out.print(section9InputArray[op] + " ");
+		} // for
+		System.out.println();
 		System.out.println(section9(section9InputArray)); // This calls the section9 method.
 		if (section9(section9InputArray)) {										// This provides clarification of the answer for Section 9.
 			System.out.println("The Section 9 numbers are more than 100.");
 		} else {
 			System.out.println("The Section 9 numbers are less than or equal to 100.");
-		}
+		} // if else
 		
+		System.out.println();
+		System.out.println("Section 10");		
+		double[] section10InputArray = {15.7,25.33,35.4,65}; // This provides input for the section10 method.
+		System.out.println("The input numbers are:  "); 
+		for (int pp = 0; pp < section10InputArray.length; pp++) {  // This displays the input numbers.
+			System.out.print(section10InputArray[pp] + " ");
+		} // for
+		System.out.println();
+		System.out.print("The average of the Section 10 array of double is:  ");
+		System.out.println(section10(section10InputArray)); // This calls the section10 method.
+		
+		
+		System.out.println();
+		System.out.println("Section 11");
+		double[] section11InputArray1 = {21,34,46,22}; // This provides the first input array for the section11 method.
+		double[] section11InputArray2 = {2,4,8,13,20,40}; // This provides the 2nd input array for the section11 method.
+		System.out.println(section11(section11InputArray1, section11InputArray2)); // This calls the section11 method.
+		
+		
+		System.out.println();
+		System.out.println("Section 12");
+		boolean isHotOutside = true; // This declares and initializes the weather condition variable, isHotOutside, outside, for the Section 12 method, willBuyDrink.
+		double moneyInPocket = 11.0; // This declares and initializes the amount of money you have in your pocket, as input to the Section 12 method, willBuyDrink.
+		if (willBuyDrink(isHotOutside, moneyInPocket)) { // This calls the section12 method, named willBuyDrink(), with the decision being printed out.
+			System.out.println("It's hot out, and I have enough money, so I will buy the drink.");
+		} else {
+			System.out.println("It's either not hot outside, or I don't have enough money, so I'm not buying the drink.");
+		} // Section 12 if
+		
+
+		System.out.println();
+		System.out.println("Section 13");
+		System.out.println("This method will convert yards to meters, or meters to yards, based upon your selection.");
+		System.out.println("Which measurement do you want to start with?  Enter yards or meters:  ");
+		Scanner kb = new Scanner(System.in);				// This sets up the Scanner to collect user input.  
+		String section13measure = kb.nextLine();			// This collects the user's choice of yards or meters as input.
+		if (section13measure.equals("yards") || section13measure.equals("meters")) { // This does error checking on the user input.  Only selecting 'yards' or 'meters' will allow it to continue.
+			System.out.println("Ok, how many " + section13measure + " do you want to convert?  "); // This prompts the user to enter the number of yards or meters they want to convert, as input.
+			double section13InputValue = kb.nextInt();			// this collects the user's number of yards or meters they want converted.
+			String oppositeSection13measure = ""; // This variable, and the following if statement, sets up the target measurement unit, for use in the output display after that.
+			if (section13measure.equals("yards")) {
+				oppositeSection13measure = "meters";
+			} else {
+				oppositeSection13measure = "yards";
+			}
+			System.out.println("The equivalent number of " + oppositeSection13measure + " is " + section13(section13measure, section13InputValue)); // This calls the section13 method and provides the output.
+			kb.close(); // Closing the kb input variable.
+		} else {
+			System.out.println("You've provided invalid input. Please re-run this and select only either yards or meters.");
+		} // Section 13 if.
+
 		
 	} //main
 	
@@ -131,5 +189,53 @@ public class CodingAssignment {
 		} // if.
 		return section9Answer;  
 	} // section 9 method
+	
+	public static double section10(double[] section10Array) { // Defines the method for Section 10.
+		double section10Sum = 0;
+		for (int pq = 0; pq < section10Array.length; pq++) {
+			section10Sum = section10Sum + section10Array[pq];  // This adds the elements of the array.
+		} //for
+		return section10Sum / section10Array.length; // This calculates the average of the elements of the array and then returns that figure to the call.
+	} // section 10 method
+	
+	public static boolean section11(double[] section11Array1, double[] section11Array2) { // Defines the method for Section 11.
+		boolean section11Answer = false;  // These declare and initialize the variables for the section11 method.
+		double section11FirstSum = 0;
+		double section11SecondSum = 0;
+		double section11FirstAvg = 0;
+		double section11SecondAvg = 0;
+		for (int qq = 0; qq < section11Array1.length; qq++) {
+			section11FirstSum += section11FirstSum + section11Array1[qq]; // This calculates the sum of the elements of section11Array1.
+		} // for section11Array1
+		for (int qr = 0; qr < section11Array2.length; qr++) {
+			section11SecondSum += section11SecondSum + section11Array2[qr]; // This calculates the sum of the elements of section11Array2.
+		} // for section11Array2
+		section11FirstAvg = section11FirstSum / section11Array1.length; // This calculates the average of the elements of section11Array1.
+		section11SecondAvg = section11SecondSum / section11Array2.length; // This calculates the average of the elements of section11Array2.
+		if (section11FirstAvg > section11SecondAvg) { 					// This determines whether the average of the elements of section11Array1 is larger than that of section11Array2.
+			section11Answer = true;
+		} // if
+		System.out.println("The average of the first array is " + section11FirstAvg + " and the average of the second array is " + section11SecondAvg);  // This provides clarification for the method11 answer.
+		return section11Answer;  // This provides the boolean return for method11.
+	} // section 11 method
+	
+	public static boolean willBuyDrink(boolean isHotOutside, double moneyInPocket) { // This defines the method for Section 12.
+		boolean willBuyDrinkDecision = false; // This declares and initializes the return variable for Section 12.
+		if (isHotOutside && moneyInPocket > 10.5) {						// These if statements determine whether to buy a drink, or not, based on the outside temperature and how much money you have.
+				willBuyDrinkDecision = true;	// This makes the decision Yes.
+		} // if									// All of the other possibilities (It's hot, but you don't have enough money, or it's cold, but you may or may not have enough money) result in a No decision.
+		return willBuyDrinkDecision; // This returns the decision.
+	} // section 12 method
+	
+	
+	public static double section13(String section13measure, double section13InputValue) { // This defines the method for Section 13.
+		double section13Answer = 1;
+		if (section13measure.equals("yards")) { // For yards to meters conversion.
+			section13Answer = section13InputValue * 0.9144; // Calculates the number of meters, given the input number of yards, based on https://www.metric-conversions.org/length/yards-to-meters.htm
+		} else if (section13measure.equals("meters")) { // for meters to yards conversion.
+			section13Answer = section13InputValue * 1.09361; // Calculates the number of yards, given the input number of meters, based on https://www.metric-conversions.org/length/meters-to-yards.htm
+		} // else if
+		return section13Answer;  // This returns the section13 method answer.
+	} // section 13 method
 
 } //Class

@@ -1,0 +1,63 @@
+Section 1.a
+3 9 23 64 2 8 28 93 
+The array length is 8
+The altered array is: 
+3 9 23 64 2 8 28 90 
+
+Section 1.b
+The ages2 array is:  
+30 43 20 83 54 27 89 100 42 
+The array length is 9
+The altered array is:  
+30 43 20 83 54 27 89 100 12 
+
+Section 1.c
+The average age is 50
+
+Section 2.a
+The total number of letters is 23.0
+The average length of each word in the names array is 3.8333333333333335
+
+Section 2.b
+Sam Tommy Tim Sally Buck Bob 
+
+Section 3
+You access the last element of any array by using array[array.length-1].
+
+Section 4
+You access the first element of any array with array[0].
+
+Sections 5 and 6
+The sum of the elements of the names array is 23.0
+
+Section 7
+HelloHelloHelloHelloHello
+
+Section 8
+Randy Pettit
+
+Section 9
+The input numbers are:  
+25 30 40 50 
+true
+The Section 9 numbers are more than 100.
+
+Section 10
+The input numbers are:  
+15.7 25.33 35.4 65.0 
+The average of the Section 10 array of double is:  35.3575
+
+Section 11
+The average of the first array is 104.5 and the average of the second array is 54.0
+true
+
+Section 12
+It's hot out, and I have enough money, so I will buy the drink.
+
+Section 13
+This method will convert yards to meters, or meters to yards, based upon your selection.
+Which measurement do you want to start with?  Enter yards or meters:  
+meters
+Ok, how many meters do you want to convert?  
+3
+The equivalent number of yards is 3.28083
